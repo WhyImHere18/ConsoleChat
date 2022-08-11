@@ -1,7 +1,17 @@
 #include "User.h"
 #include <string>
 
-User::User(const std::string& login, const std::string& password) : login_(login), password_(password) {}
+User::User(const std::string& login, const std::string& password, const std::string& name) : login_(login), password_(password), name_(name) {}
+
+void User::setName(const std::string& name)
+{
+	name_ = name;
+}
+
+const std::string& User::getName() const
+{
+	return name_;
+}
 
 void User::setLogin(const std::string& login)
 {
